@@ -1,0 +1,101 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base para o HTML e Body */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(ellipse at bottom, #001f3f 0%, #000814 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* Fundo com estrelas animadas */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png') repeat;
+  background-size: contain;
+  animation: estrelas 120s linear infinite;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+@keyframes estrelas {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+/* Conteúdo principal */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Menu de navegação */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #007BFF, #00BFFF);
+  border-radius: 50px;
+  box-shadow: 0 0 15px #00bfff;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00bfff, 0 0 40px #007BFF;
+}
+
+/* Responsividade completa */
+@media (max-width: 768px) {
+  .menu a {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .menu a {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+  }
+}
