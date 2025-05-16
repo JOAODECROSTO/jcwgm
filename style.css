@@ -1,4 +1,4 @@
-/* Reset básico */
+
 /* Reset e base */
 * {
   margin: 0;
@@ -8,8 +8,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f9ff;
-  color: #333;
+  background-color: #0d1b2a;
+  color: #f0f0f0;
   padding: 20px;
 }
 
@@ -17,15 +17,15 @@ body {
 .container {
   max-width: 900px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #1b263b;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Títulos */
 h1, h2, h3 {
-  color: #008fd1;
+  color: #00b4d8;
   margin-bottom: 1rem;
 }
 
@@ -38,7 +38,7 @@ p {
 /* Links */
 a {
   text-decoration: none;
-  color: #008fd1;
+  color: #00b4d8;
 }
 
 a:hover {
@@ -55,7 +55,7 @@ a:hover {
 }
 
 .menu a {
-  background-color: #008fd1;
+  background-color: #0077b6;
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -64,7 +64,7 @@ a:hover {
 }
 
 .menu a:hover {
-  background-color: #005f8f;
+  background-color: #023e8a;
 }
 
 /* Listas */
