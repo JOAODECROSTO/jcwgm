@@ -4,24 +4,124 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Mim - João de Cristo</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Parágrafos */
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo com fundo azul escuro */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0a1f44, #0f2b66);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Container central */
+    .container {
+      background-color: #132f63;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 1s ease;
+      position: relative;
+    }
+
+    /* Título principal */
+    .container h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #4ecdc4;
+    }
+
+    /* Subtítulo */
+    .container h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #61c0bf;
+    }
+
+    /* Links */
+    .container a {
+      color: #4ecdc4;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .container a:hover {
+      color: #3abdb2;
+      text-decoration: underline;
+    }
+
+    /* Estilo da "fita" voltar */
+    .menu a {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      background-color: #4ecdc4;
+      color: #0a1f44;
+      padding: 12px 24px;
+      border-radius: 0 8px 8px 0;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transform: rotate(-5deg);
+      transition: all 0.3s ease;
+    }
+
+    .menu a:hover {
+      background-color: #3abdb2;
+      transform: rotate(-3deg) scale(1.05);
+    }
+
+    /* Animação de entrada */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
+    <div class="menu">
+      <a href="curriculo.html">← Voltar</a>
+    </div>
     <h1>Sobre Mim</h1>
     <p>Olá! Me chamo <strong>João de Cristo</strong>, tenho 19 anos e atualmente estou cursando <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na <strong>PUC Minas</strong>.</p>
     <p>Sou apaixonado por tecnologia e estou em constante aprendizado. Tenho conhecimento básico no pacote Office e estou sempre buscando evoluir, com dedicação e curiosidade para novas ferramentas e linguagens.</p>
     <h2>Informações de Contato</h2>
     <p><strong>Endereço:</strong> Bairro Borges<br>
-      <a href="https://www.google.com/maps/search/?api=1&query=Bairro+Borges" target="_blank">Ver no Mapa</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bairro+Borges" target="_blank" rel="noopener noreferrer">Ver no Mapa</a>
     </p>
     <p><strong>E-mail:</strong> <a href="mailto:jcwgmoreira@gmail.com">jcwgmoreira@gmail.com</a></p>
     <p><strong>WhatsApp:</strong> 
-      <a href="https://wa.me/5531985917348" target="_blank">(31) 98591-7348</a>
+      <a href="https://wa.me/5531985917348" target="_blank" rel="noopener noreferrer">(31) 98591-7348</a>
     </p>
-    <div class="menu">
-      <a href="index.html">Voltar</a>
-    </div>
   </div>
 </body>
 </html>
