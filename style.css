@@ -1,55 +1,51 @@
 /* Reset básico */
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base para o HTML e Body */
-html, body {
-  width: 100%;
-  min-height: 100%;
-  font-family: 'Arial', sans-serif;
-  background: radial-gradient(ellipse at bottom, #001f3f 0%, #000814 100%);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f9ff;
+  color: #333;
   padding: 20px;
 }
 
-/* Fundo com estrelas animadas */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%;
-  height: 300%;
-  background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png') repeat;
-  background-size: contain;
-  animation: estrelas 120s linear infinite;
-  opacity: 0.15;
-  z-index: 0;
-}
-
-@keyframes estrelas {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
-}
-
-/* Conteúdo principal */
+/* Container principal */
 .container {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
   padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Menu de navegação */
+/* Títulos */
+h1, h2, h3 {
+  color: #008fd1;
+  margin-bottom: 1rem;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #008fd1;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Menus de navegação */
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -59,43 +55,37 @@ body::before {
 }
 
 .menu a {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  color: #fff;
-  text-decoration: none;
-  background: linear-gradient(135deg, #007BFF, #00BFFF);
-  border-radius: 50px;
-  box-shadow: 0 0 15px #00bfff;
-  transition: all 0.3s ease;
+  background-color: #008fd1;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
 }
 
 .menu a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #00bfff, 0 0 40px #007BFF;
+  background-color: #005f8f;
 }
 
-/* Responsividade completa */
+/* Listas */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  .menu a {
-    font-size: 1.1rem;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  html, body {
-    padding: 10px;
+  .container {
+    padding: 1rem;
   }
 
   .menu {
     flex-direction: column;
-    gap: 0.8rem;
+    align-items: center;
   }
 
   .menu a {
     width: 100%;
-    max-width: 300px;
-    font-size: 1rem;
+    text-align: center;
   }
 }
