@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo João de Cristo - FACS</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    /* Container central */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Cartão */
+    .card {
+      background-color: #1e1b4b;
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .card h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #c7d2fe;
+      margin-bottom: 20px;
+    }
+
+    .desc {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    /* Botão interativo */
+    .button {
+      background-color: #6366f1;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #818cf8;
+    }
+
+    /* Animação de entrada */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>João de Cristo</h1>
+      <p class="subtitle">Faculdade FACS</p>
+      <p class="desc">Bem-vindo ao meu currículo online! Clique abaixo para visualizar minha trajetória acadêmica e profissional.</p>
+      <a href="curriculo.html" class="button">Ver Currículo</a>
+    </div>
+  </div>
+</body>
+</html>
 
